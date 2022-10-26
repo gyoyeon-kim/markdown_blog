@@ -12,10 +12,13 @@ app.get('/',(req,res) => {
         title: 'Test Article',
         createdAt: Date.now(),
         description: 'Text description'
-
-
+    },
+    {
+        title: 'Test Article 2 ',
+        createdAt: Date.now(),
+        description: 'Text description 2 '
     }]
-    res.render('index', {articles: 'Hello' })
+    res.render('index', {articles: articles })
 })
 
 app.listen(5000)
