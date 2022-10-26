@@ -10,15 +10,15 @@ app.use('/articles', articleRouter)
 app.get('/',(req,res) => {
     const articles = [{
         title: 'Test Article',
-        createdAt: Date.now(),
+        createdAt: new Date(),
         description: 'Text description'
     },
     {
         title: 'Test Article 2 ',
-        createdAt: Date.now(),
+        createdAt: new Date(),
         description: 'Text description 2 '
     }]
-    res.render('index', {articles: articles })
+    res.render('articles/index', {articles: articles })
 })
 
 app.listen(5000)

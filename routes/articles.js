@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/test',(requ, res) => {
-    res.send('In articles')
+router.get('/new',(requ, res) => {
+    res.render('articles/new')
 })
 
 
